@@ -79,40 +79,41 @@ function viewItems() {
                 }
             }
             //If insuffcient stock 
-            if (parseInt(transaction.qty) > itemQuanity) {
+            if (parseInt(transaction.quanity) > itemQuanity) {
                 console.log("\nInsufficient inventory for your requested quantity. We have "
                     + itemQuanity + " in stock. Try again.\n");
-                stock();
-            } else if (parseInt(transaction.qty) <= itemQuanity) {
-                console.log("\nCongrats! You successfully purchased " + transaction.qty
+                start();
+            } else if (parseInt(transaction.quanity) <= itemQuanity) {
+                console.log("\nCongrats! You successfully purchased " + transaction.quanity
                     + " of " + itemName + ".");
-                lowerQty(transaction.id, transaction.qty, itemQuanity, itemPrice);
+                lowerQuanity(transaction.id, transaction.quanity, itemQuanity, itemPrice);
             }
-            })
+        })
     })
-}
 
-    function consoleTable(results) {
-        // create empty values array
-        var values = [];
-        // loop through all results
-        for (var i = 0; i < results.length; i++) {
-            // create resultObject for each iteration. properties of object will be column
-            // headings in the console table
-            var resultObject = {
-                ID: results[i].item_id,
-                Item: results[i].product_name,
-                Price: "$" + results[i].price,
-                Department: results[i].department_name
-            };
-            // push result object to values array
-            values.push(resultObject);
-        }
-        // create table with title items for sale with the values array
-        console.table("\nItems for Sale", values);
+
+function consoleTable(results) {
+    // create empty values array
+    var values = [];
+    // loop through all results
+    for (var i = 0; i < results.length; i++) {
+        // create resultObject for each iteration. properties of object will be column
+        // headings in the console table
+        var resultObject = {
+            ID: results[i].item_id,
+            Item: results[i].product_name,
+            Price: "$" + results[i].price,
+            Department: results[i].department_name
+        };
+        // push result object to values array
+        values.push(resultObject);
     }
-
-});
+    // create table with title items for sale with the values array
+    console.table("\nItems for Sale", values);
 }
+}
+
+
+
 
 
