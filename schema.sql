@@ -10,11 +10,11 @@ product_name VARCHAR (100) NOT NULL,
 department_name VARCHAR (100) NOT NUll,
 price DECIMAL (10,2) NOT NULL,
 stock_quanity INT (50) NOT NUll,
-product_sales DECIMAL(10,2) DEFAULT 0,
+product_sales DECIMAL(10,2) NOT NULL,
 PRIMARY KEY (item_id)
 );
 
-INSERT INTO products (product_name, department_name, price, stock_quanity, product_sales )
+INSERT INTO products (product_name, department_name, price, stock_quanity, product_sales)
 VALUES ("Rucksack", "Outdoors", 98.95, 11, 100),
 ("Crock Pot", "Kitchen", 49.95, 26, 145),
 ("Power Drill", "Tools", 84.95, 17, 85),
