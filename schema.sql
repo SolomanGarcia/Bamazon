@@ -14,7 +14,7 @@ product_sales DECIMAL(10,2) NOT NULL,
 PRIMARY KEY (item_id)
 );
 
-INSERT INTO products (product_name, department_name, price, stock_quanity, product_sales)
+INSERT INTO products (product_name, department_name, price, stock_quantity, product_sales)
 VALUES ("Rucksack", "Outdoors", 98.95, 11, 100),
 ("Crock Pot", "Kitchen", 49.95, 26, 145),
 ("Power Drill", "Tools", 84.95, 17, 85),
