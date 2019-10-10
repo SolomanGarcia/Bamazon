@@ -42,3 +42,12 @@ function start() {
 		}
 	})
 }
+
+function viewProducts() {
+	var query = "SELECT * FROM products";
+	connection.query(query, function(err, results) {
+		if (err) throw err;
+		consoleTable("\nAll Products For Sale", results);
+		start();
+	});
+}
