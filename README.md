@@ -50,10 +50,37 @@ Within the manager portal (bamazonManager.js) you'll be able to:
 
 ![Screen shot](images/newprod.png)
 
-## Technologies Used
-* JavaScript
-* Node.js
-* MySQL
-* NPM Packages
- 
+## Installation
 
+To run the app locally, you will first need to git clone the repository to your local machine. 
+
+HTTPS:
+````
+$ git clone https://github.com/solomangarcia/Bamazon.git
+````
+SSH:
+````
+$ git clone git@github.com:solomangarcia/bamazon.git
+````
+
+Once cloned, cd into the repository and install the necessary dependencies by running:
+````
+$ npm install
+````
+
+You can then run the app in the customer view by running:
+````
+$ node bamazonCustomer.js
+````
+
+## Built With
+
+* [Node.js](https://nodejs.org/en/) - JavaScript runtime
+* [MySQL](https://www.mysql.com/) - Database management
+* [npm](https://www.npmjs.com/) - Dependency management
+
+ ## Authors
+See contribution history [here](https://github.com/SolomanGarcia/Bamazon/pulse)
+
+## Future Updates
+Build out front-end and make bamazon a full-stack app.
